@@ -9,8 +9,8 @@ set shell=/bin/bash
 " Backups {{{
 " ---------------
 set backup
-set backupdir=~/.vim/backup
-set directory=~/.vim/tmp
+set backupdir=~/.myvim/backup
+set directory=~/.myvim/tmp
 "}}}
 " Language & encoding{{{
 " ---------------
@@ -133,6 +133,15 @@ autocmd FileType xml set foldmethod=syntax
 "}}}
 " Path setting {{{
 set path+=;,include;inc;
+"}}}
+" Copy(paste) to(from) system clip board {{{
+"Use clipboard '+' can share context with other programs
+:vmap <C-c> "+y
+:nmap <C-v> "+p
+"Use clipboard '*' can share context between windows and ubuntu through
+"synergy
+":vmap <C-c> *y
+":nmap <C-v> *p
 "}}}
 "}}}
 " Bindings {{{
@@ -333,7 +342,7 @@ Plug 'mhinz/vim-signify'
 " }}}
 " YouCompleteMe {{{
 Plug 'Valloric/YouCompleteMe'
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = "~/.myvim/.ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_show_diagnostics_ui = 0
 set completeopt-=preview
@@ -404,5 +413,20 @@ Plug 'ryanoasis/vim-devicons'
 " vim-tmux-navigator {{{
 Plug 'christoomey/vim-tmux-navigator'
 " }}}
+" ctrlp.vim {{{
+" ---------------
+Plug 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_map = '<leader>,'
+let g:ctrlp_cmd = 'CtrlP'
+" Ensure max height isn't too large. (for performance)
+let g:ctrlp_max_height = 10
+
+nmap <leader>. :CtrlPClearCache<cr>:CtrlP<cr>
+nmap <leader>l :CtrlPLine<cr>
+nmap <leader>b :CtrlPBuff<cr>
+nmap <leader>m :CtrlPBufTag<cr>
+nmap <leader>M :CtrlPBufTagAll<cr>
+let g:ctrlp_clear_cache_on_exit = 1
+"  "}}}
 call plug#end()
 "}}}
