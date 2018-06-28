@@ -9,8 +9,8 @@ set shell=/bin/bash
 " Backups {{{
 " ---------------
 set backup
-set backupdir=~/.myvim/backup
-set directory=~/.myvim/tmp
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
 "}}}
 " Language & encoding{{{
 " ---------------
@@ -28,7 +28,7 @@ if has('win32') || has('win64')
     set guifontwide=Yahei_Mono:h10:cGB2312
 elseif has("gui_macvim")
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
-    set guifontwide=Yahei_Mono:h10:cGB2312
+    "set guifontwide=Yahei_Mono:h10:cGB2312
 else
     "set guifont=YaHei\ Mono\ 11
     "set guifont=YaHei\ Consolas\ hybrid\ for\ Powerline\ 11
@@ -342,7 +342,7 @@ Plug 'mhinz/vim-signify'
 " }}}
 " YouCompleteMe {{{
 Plug 'Valloric/YouCompleteMe'
-let g:ycm_global_ycm_extra_conf = "~/.myvim/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_show_diagnostics_ui = 0
 set completeopt-=preview
