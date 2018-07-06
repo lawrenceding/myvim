@@ -429,5 +429,9 @@ nmap <leader>m :CtrlPBufTag<cr>
 nmap <leader>M :CtrlPBufTagAll<cr>
 let g:ctrlp_clear_cache_on_exit = 1
 "  "}}}
+" vimtex {{{
+" ---------------
+Plug 'lervag/vimtex'
+"}}}
 call plug#end()
 "}}}
