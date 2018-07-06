@@ -1,7 +1,7 @@
 ## vimrc used across windows and linux
 ### Step 1: Clone
 ```
-git clone https://github.com/ghostylee/dotVim.git ~/.vim
+git clone https://github.com/lawrenceding/myvim.git ~/.vim
 ```
 
 ### Step 2: Link
